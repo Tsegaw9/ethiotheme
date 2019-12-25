@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package twentyseventeen-child
+ * @package Ethiotheme
  */
 
 ?>
@@ -14,18 +14,19 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentyseventeen-child' ); ?></a>
+<div id="page" class="site container">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ethiotheme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
+		<div class="site-branding navbar-brand">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -37,22 +38,32 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$twentyseventeen_child_description = get_bloginfo( 'description', 'display' );
-			if ( $twentyseventeen_child_description || is_customize_preview() ) :
+			$ethiotheme_description = get_bloginfo( 'description', 'display' );
+			if ( $ethiotheme_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $twentyseventeen_child_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $ethiotheme_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'twentyseventeen-child' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+		<button class="navbar-toggle navbar-toggler-right" type="button"data-toggle="collapse" 
+			data-target="#bs4navbar" aria-control="bs4navbar" aria-expanded="false" aril-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<?php
+		wp_nav_menu([
+			'menu'		=>	'primary',
+			'theme_location'	=>	'primary',
+			'container'  		=>	'div',
+			'container_id'		=>	'bs4navbar',
+			'container_class'	=> 	'collapse navbar-collapse',
+			'menu_id'			=>	'main-menu',
+			'menu_class'		=>	'navbar-nav ml-auto',
+			'depth'				=>	2,
+			'fallback'			=> 'bs4navwalker::fallback',
+			'walker'			=> new bs4navwalker()
+		]);
+		?>
+		</nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content row">
