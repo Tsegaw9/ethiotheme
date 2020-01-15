@@ -9,13 +9,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package twentyseventeen-child
+ * @package Ethiotheme
  */
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
+<div class="container">
+<div class="row">
+<div class="col-sm-8">
+	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main">
 
 		<?php
@@ -53,7 +55,10 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+	</div>
+<div class="col-md-4">
+	<?php get_sidebar(); ?>
+</div>
+</div>
+</div>
+<?php get_footer();

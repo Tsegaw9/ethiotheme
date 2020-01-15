@@ -43,8 +43,6 @@
         }
         ?>
         </div>
-      </div>
-	  
 		<div class="site-info" col-md-12>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ethiotheme' ) ); ?>">
 				<?php
@@ -58,6 +56,9 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ethiotheme' ), 'EthioTheme', '<a href="http://Tsegaw%20baharue.com">Tsegaw</a>' );
 				?>
 		</div><!-- .site-info -->
+      </div>
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
