@@ -46,7 +46,7 @@
 		</div><!-- .site-branding -->
 
 		<button class="navbar-toggler navbar-toggler-icon navbar-toggler-right " type = "button" data-toggle="collapse" data-target="#bs4navbar" aria-controls = "bs4navbar" 
-		aria-expanded="false" aria-label="Toggle navigation"><?php esc_html_e( '', 'yflowery' ); ?></button>
+		aria-expanded="false" aria-label="Toggle navigation"><?php esc_html_e( '', 'ethio' ); ?></button>
 		
 		</button>
 		
