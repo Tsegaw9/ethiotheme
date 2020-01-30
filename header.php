@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Ethiotheme
+ * @package Ethio
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site container">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ethiotheme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ethio' ); ?></a>
 
 	<header id="masthead" class="site-header">
 	<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
@@ -38,16 +38,16 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$ethiotheme_description = get_bloginfo( 'description', 'display' );
-			if ( $ethiotheme_description || is_customize_preview() ) :
+			$ethio_description = get_bloginfo( 'description', 'display' );
+			if ( $ethio_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $ethiotheme_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $ethio_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<button class="navbar-toggle navbar-toggler-right" type="button" data-toggle="collapse" 
-		data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
+		<button class="navbar-toggler navbar-toggler-icon navbar-toggler-right " type = "button" data-toggle="collapse" data-target="#bs4navbar" aria-controls = "bs4navbar" 
+		aria-expanded="false" aria-label="Toggle navigation"><?php esc_html_e( '', 'yflowery' ); ?></button>
+		
 		</button>
 		
 		<?php

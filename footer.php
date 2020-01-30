@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Ethiotheme
+ * @package Ethio
  */
 
 ?>
@@ -44,16 +44,16 @@
         ?>
         </div>
 		<div class="site-info" col-md-12>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ethiotheme' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ethio' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly Powered by %s', 'ethiotheme' ), 'WordPress' );
+				printf( esc_html__( 'Proudly Powered by %s', 'ethio' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ethiotheme' ), 'EthioTheme', '<a href="http://Tsegaw%20baharue.com">Tsegaw</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ethio' ), 'ethio', '<a href="http://Tsegaw%20baharue.com">Tsegaw</a>' );
 				?>
 		</div><!-- .site-info -->
       </div>

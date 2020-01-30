@@ -5,11 +5,11 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function ethiotheme_widgets_init() {
+function ethio_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Right Sidebar', 'ethiotheme' ),
+		'name'          => esc_html__( 'Right Sidebar', 'ethio' ),
 		'id'            => 'right-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'ethiotheme' ),
+		'description'   => esc_html__( 'Add widgets here.', 'ethio' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -54,4 +54,4 @@ function ethiotheme_widgets_init() {
 		) );
 	}
 
-add_action( 'widgets_init', 'ethiotheme_widgets_init' );
+add_action( 'widgets_init', 'ethio_widgets_init' );

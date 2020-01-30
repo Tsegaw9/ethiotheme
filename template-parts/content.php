@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Ethiotheme
+ * @package Ethio
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-	<?php if ( has_post_thumbnail()) the_post_thumbnail(); ?>
+	
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -23,14 +23,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				ethiotheme_posted_on();
-				ethiotheme_posted_by();
+				ethio_posted_on();
+				ethio_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php ethiotheme_post_thumbnail(); ?>
+	<?php ethio_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -38,7 +38,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ethiotheme' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ethio' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -52,14 +52,14 @@
 		}
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ethiotheme' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ethio' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ethiotheme_entry_footer(); ?>
+		<?php ethio_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <hr>
